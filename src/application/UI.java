@@ -57,9 +57,19 @@ public class UI {
 		printCapturedPieces(captured);
 		System.out.println();
 		System.out.println("Turno : " + chessMatch.getTurn());
-		System.out.println("Esperando jogador: " + chessMatch.getCurrentPlayer());
-		if (chessMatch.getCheck()) {
-			System.out.println("CHECK!");
+		if (!chessMatch.getCheck()) {
+			System.out.println("Esperando jogador: " + chessMatch.getCurrentPlayer());
+			if (chessMatch.getCheck()) {
+				System.out.println("CHECK!");
+			}
+		}
+		else { 
+			System.out.println("CHECKMATE!");
+			System.out.println("Ganhador: " + chessMatch.getCurrentPlayer());
+			System.out.println();
+			System.out.println("Projeto Curso Java");
+			System.out.println("Professor: Nelio Alves");
+			System.out.println("Aluno: Fernando C. Pagani");
 		}
 	}
 
